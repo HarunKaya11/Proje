@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChefs KDS</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <!-- Bootstrap bağlantısı -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {
+        "packages":["map"],
+        // Note: you will need to get a mapsApiKey for your project.
+        // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+        "mapsApiKey": "AIzaSyBYpyL367RVXcIzvyUowXeTHnk5AlnCYrw"
+      });
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Lat', 'Long', 'Name'],
+          [38.45070, 27.17305, 'Ege Perla BigChefs'],
+          [38.42975, 27.13451, 'Alsancak BigChefs'],
+        ]);
+
+        var map = new google.visualization.Map(document.getElementById('map_div'));
+        map.draw(data, {
+          showTooltip: true,
+          showInfoWindow: true
+        });
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
+    
+    
+    <div class="d-flex">
+        <div class="flex-grow-1 p-4" style="background-color: #ddd;">
+          <div class="row">
+              <div class="col-md-3">
+                <div id="map_div" style="width: 2250px; height: 800px"></div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+          
+  </body>
+</html>

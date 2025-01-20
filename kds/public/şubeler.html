@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BigChefs KDS</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+    <!-- Bootstrap bağlantısı -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <div id="navbar-container"></div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('navbar-container').innerHTML = data);
+    </script>
+    
+    
+    <div class="d-flex">
+
+        <div id="sidebar-container"></div>
+            <script>
+                fetch('sidebar.html')
+                    .then(response => response.text())
+                    .then(data => document.getElementById('sidebar-container').innerHTML = data);
+            </script>
+        <div class="flex-grow-1 p-4" style="background-color: #ddd;">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="kriter-container">
+                        <h2 class="kriter-title">Şube Seçimi</h2>
+                        <label for="kriter-select">Kriter Seçin:</label>
+                        <select id="kriter-select">
+                            <option value="stok">Stok</option>
+                            <option value="satis">Satış</option>
+                            <option value="kar">Kar</option>
+                        </select>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script src="subechart.js"></script>
+                </div>
+                <div class="col-md-3">
+                    <div class="kriter-container2">
+                        <h2 class="kriter-title2">Şube Seçimi</h2>
+                        <label for="kriter-select2">Kriter Seçin:</label>
+                        <select id="kriter-select2">
+                            <option value="stok">Stok</option>
+                            <option value="satis">Satış</option>
+                            <option value="kar">Kar</option>
+                        </select>
+                        <canvas id="myChart2"></canvas>   
+                    </div>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <script src="chart.js"></script>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

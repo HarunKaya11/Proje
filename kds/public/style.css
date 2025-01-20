@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#sidebar .nav-item {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+#sidebar .nav-item:hover {
+    color: red;
+}
+
+
+/* Tasarım kısmı */
+.design {
+    flex: 1;
+    background: linear-gradient(to bottom, red, red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+
+/* Form kısmı */
+.form {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: red;
+}
+
+.input-field {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    outline: none;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.input-field:focus {
+    border-color: red;
+    box-shadow: 0 0 8px rgba(255, 126, 95, 0.4);
+}
+
+.button {
+    width: 100%;
+    padding: 15px;
+    background: red;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+.button:hover {
+    background: #feb47b;
+    box-shadow: 0 4px 10px rgba(255, 126, 95, 0.4);
+}
+
+.kriter-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px white;
+    text-align: center;
+}
+
+.kriter-title {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.kriter-title2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+
+#kriter-select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+}
+
+#kriter-select2 {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #222;
+    color: #fff;
+}
+
+#chart-container {
+    margin-top: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+.kriter-container2 {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: red;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px white;
+    text-align: center;
+}
+
+
+#chart-container2 {
+    margin-top: 20px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 8px;
+}
+
+
